@@ -1,4 +1,7 @@
 package com.example.fitbudbackend.exceptions;
 
-public class EmailAlreadyExists {
+public class EmailAlreadyExistsException extends RuntimeException {
+    public EmailAlreadyExistsException() {
+        super("Email already exists.");
+    }
 }

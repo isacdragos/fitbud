@@ -1,8 +1,8 @@
-package com.example.fitbudbackend.config;
+package com.example.fitbudbackend.auth.config;
 
-import com.example.fitbudbackend.entities.User;
-import com.example.fitbudbackend.services.CustomUserDetailsService;
-import com.example.fitbudbackend.services.JwtService;
+import com.example.fitbudbackend.auth.entities.User;
+import com.example.fitbudbackend.auth.services.CustomUserDetailsService;
+import com.example.fitbudbackend.auth.services.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

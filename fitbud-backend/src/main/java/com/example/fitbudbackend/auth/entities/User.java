@@ -1,4 +1,4 @@
-package com.example.fitbudbackend.entities;
+package com.example.fitbudbackend.auth.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

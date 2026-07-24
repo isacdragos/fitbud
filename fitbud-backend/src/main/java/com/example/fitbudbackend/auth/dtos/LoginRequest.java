@@ -1,4 +1,4 @@
-package com.example.fitbudbackend.dtos;
+package com.example.fitbudbackend.auth.dtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

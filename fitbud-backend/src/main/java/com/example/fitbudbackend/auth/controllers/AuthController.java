@@ -1,14 +1,12 @@
-package com.example.fitbudbackend.controllers;
+package com.example.fitbudbackend.auth.controllers;
 
-import com.example.fitbudbackend.dtos.LoginRequest;
-import com.example.fitbudbackend.dtos.LoginResponse;
-import com.example.fitbudbackend.dtos.RegisterRequest;
-import com.example.fitbudbackend.entities.User;
-import com.example.fitbudbackend.services.AuthService;
+import com.example.fitbudbackend.auth.dtos.LoginRequest;
+import com.example.fitbudbackend.auth.dtos.LoginResponse;
+import com.example.fitbudbackend.auth.dtos.RegisterRequest;
+import com.example.fitbudbackend.auth.services.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

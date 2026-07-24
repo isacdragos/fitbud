@@ -1,4 +1,4 @@
-package com.example.fitbudbackend.controllers;
+package com.example.fitbudbackend.auth.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

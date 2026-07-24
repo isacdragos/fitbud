@@ -1,7 +1,7 @@
-package com.example.fitbudbackend.services;
+package com.example.fitbudbackend.auth.services;
 
-import com.example.fitbudbackend.entities.User;
-import com.example.fitbudbackend.repositories.UserRepository;
+import com.example.fitbudbackend.auth.entities.User;
+import com.example.fitbudbackend.auth.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

@@ -1,4 +1,4 @@
-package com.example.fitbudbackend.dtos;
+package com.example.fitbudbackend.auth.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

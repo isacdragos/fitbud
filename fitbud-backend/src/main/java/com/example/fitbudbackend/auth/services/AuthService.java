@@ -1,12 +1,12 @@
-package com.example.fitbudbackend.services;
+package com.example.fitbudbackend.auth.services;
 
-import com.example.fitbudbackend.dtos.LoginRequest;
-import com.example.fitbudbackend.dtos.LoginResponse;
-import com.example.fitbudbackend.dtos.RegisterRequest;
-import com.example.fitbudbackend.entities.User;
-import com.example.fitbudbackend.exceptions.EmailAlreadyExistsException;
-import com.example.fitbudbackend.exceptions.InvalidCredentialsException;
-import com.example.fitbudbackend.repositories.UserRepository;
+import com.example.fitbudbackend.auth.dtos.LoginRequest;
+import com.example.fitbudbackend.auth.dtos.LoginResponse;
+import com.example.fitbudbackend.auth.dtos.RegisterRequest;
+import com.example.fitbudbackend.auth.entities.User;
+import com.example.fitbudbackend.auth.exceptions.EmailAlreadyExistsException;
+import com.example.fitbudbackend.auth.exceptions.InvalidCredentialsException;
+import com.example.fitbudbackend.auth.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

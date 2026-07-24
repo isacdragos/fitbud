@@ -1,4 +1,18 @@
 package com.example.fitbudbackend.exercise.enums;
 
-public class MuscleGroup {
+public enum MuscleGroup {
+    CHEST,
+    BACK,
+    SHOULDERS,
+
+    BICEPS,
+    TRICEPS,
+    FOREARMS,
+
+    QUADS,
+    HAMSTRINGS,
+    GLUTES,
+    CALVES,
+
+    CORE
 }

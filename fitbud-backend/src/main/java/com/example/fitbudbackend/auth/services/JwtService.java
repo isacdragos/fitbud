@@ -1,6 +1,6 @@
-package com.example.fitbudbackend.services;
+package com.example.fitbudbackend.auth.services;
 
-import com.example.fitbudbackend.entities.User;
+import com.example.fitbudbackend.auth.entities.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

@@ -1,5 +1,8 @@
-package com.example.fitbudbackend.auth.exceptions;
+package com.example.fitbudbackend;
 
+import com.example.fitbudbackend.auth.exceptions.EmailAlreadyExistsException;
+import com.example.fitbudbackend.auth.exceptions.InvalidCredentialsException;
+import com.example.fitbudbackend.exercise.exceptions.ExerciseNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -21,6 +24,14 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.UNAUTHORIZED)
+                .body(ex.getMessage());
+    }
+
+    @ExceptionHandler(ExerciseNotFoundException.class)
+    public ResponseEntity<String> handleExerciseNotFound(ExerciseNotFoundException ex) {
+
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
                 .body(ex.getMessage());
     }
 }

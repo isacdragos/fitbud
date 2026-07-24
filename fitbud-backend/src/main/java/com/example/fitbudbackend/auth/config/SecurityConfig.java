@@ -1,5 +1,5 @@
 
-package com.example.fitbudbackend.config;
+package com.example.fitbudbackend.auth.config;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.security.config.Customizer;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import com.example.fitbudbackend.services.CustomUserDetailsService;
+import com.example.fitbudbackend.auth.services.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;

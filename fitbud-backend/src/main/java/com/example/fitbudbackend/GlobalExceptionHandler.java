@@ -1,4 +1,4 @@
-package com.example.fitbudbackend.exceptions;
+package com.example.fitbudbackend.auth.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

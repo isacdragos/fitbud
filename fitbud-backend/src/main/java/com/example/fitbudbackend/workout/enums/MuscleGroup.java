@@ -1,4 +1,4 @@
-package com.example.fitbudbackend.exercise.enums;
+package com.example.fitbudbackend.workout.enums;
 
 public enum MuscleGroup {
     CHEST,

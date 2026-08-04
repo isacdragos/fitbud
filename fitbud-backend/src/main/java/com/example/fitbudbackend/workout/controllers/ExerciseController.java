@@ -1,8 +1,8 @@
-package com.example.fitbudbackend.exercise.controllers;
+package com.example.fitbudbackend.workout.controllers;
 
-import com.example.fitbudbackend.exercise.dtos.ExerciseResponse;
-import com.example.fitbudbackend.exercise.enums.MuscleGroup;
-import com.example.fitbudbackend.exercise.services.ExerciseService;
+import com.example.fitbudbackend.workout.dtos.ExerciseResponse;
+import com.example.fitbudbackend.workout.enums.MuscleGroup;
+import com.example.fitbudbackend.workout.services.ExerciseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

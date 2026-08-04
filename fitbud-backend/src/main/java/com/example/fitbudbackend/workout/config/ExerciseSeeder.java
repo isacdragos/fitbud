@@ -1,9 +1,11 @@
-package com.example.fitbudbackend.exercise.config;
+package com.example.fitbudbackend.workout.config;
 
-import com.example.fitbudbackend.exercise.entities.Exercise;
-import com.example.fitbudbackend.exercise.enums.MuscleGroup;
-import com.example.fitbudbackend.exercise.repositories.ExerciseRepository;
+import com.example.fitbudbackend.workout.entities.Exercise;
+import com.example.fitbudbackend.workout.enums.MuscleGroup;
+import com.example.fitbudbackend.workout.repositories.ExerciseRepository;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.jspecify.annotations.NullMarked;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +18,7 @@ public class ExerciseSeeder implements CommandLineRunner {
     private final ExerciseRepository exerciseRepository;
 
     @Override
-    public void run(String... args) {
+    public void run(String @NonNull ... args) {
 
         if (exerciseRepository.count() > 0) {
             return;

@@ -1,4 +1,4 @@
-package com.example.fitbudbackend.exercise.exceptions;
+package com.example.fitbudbackend.workout.exceptions;
 
 public class ExerciseNotFoundException extends RuntimeException {
     public ExerciseNotFoundException(Long id) {

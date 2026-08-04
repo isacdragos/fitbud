@@ -1,6 +1,6 @@
-package com.example.fitbudbackend.exercise.entities;
+package com.example.fitbudbackend.workout.entities;
 
-import com.example.fitbudbackend.exercise.enums.MuscleGroup;
+import com.example.fitbudbackend.workout.enums.MuscleGroup;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

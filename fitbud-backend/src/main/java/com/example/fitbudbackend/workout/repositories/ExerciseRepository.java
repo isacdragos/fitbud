@@ -1,7 +1,7 @@
-package com.example.fitbudbackend.exercise.repositories;
+package com.example.fitbudbackend.workout.repositories;
 
-import com.example.fitbudbackend.exercise.entities.Exercise;
-import com.example.fitbudbackend.exercise.enums.MuscleGroup;
+import com.example.fitbudbackend.workout.entities.Exercise;
+import com.example.fitbudbackend.workout.enums.MuscleGroup;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

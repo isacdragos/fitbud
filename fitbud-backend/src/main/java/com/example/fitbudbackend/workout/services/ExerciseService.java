@@ -1,9 +1,9 @@
-package com.example.fitbudbackend.exercise.services;
+package com.example.fitbudbackend.workout.services;
 
-import com.example.fitbudbackend.exercise.dtos.ExerciseResponse;
-import com.example.fitbudbackend.exercise.entities.Exercise;
-import com.example.fitbudbackend.exercise.enums.MuscleGroup;
-import com.example.fitbudbackend.exercise.repositories.ExerciseRepository;
+import com.example.fitbudbackend.workout.dtos.ExerciseResponse;
+import com.example.fitbudbackend.workout.entities.Exercise;
+import com.example.fitbudbackend.workout.enums.MuscleGroup;
+import com.example.fitbudbackend.workout.repositories.ExerciseRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

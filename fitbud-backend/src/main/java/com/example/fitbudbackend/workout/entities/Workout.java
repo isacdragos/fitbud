@@ -30,6 +30,6 @@ public class Workout {
     private User user;
 
     @OneToMany(mappedBy = "workout", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<WorkoutDay> exercises = new ArrayList<>();
+    private List<WorkoutDay> days = new ArrayList<>();
 
 }

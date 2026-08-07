@@ -60,6 +60,27 @@ public class WorkoutService {
                 .map(this::toResponse)
                 .toList();
     }
+    public WorkoutResponse getWorkout(Long workoutId, Authentication authentication) {
+        User user = userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        Workout workout = workoutRepository
+                .findByIdAndUser(workoutId, user)
+                .orElseThrow(WorkoutNotFoundException::new);
+
+        return toResponse(workout);
+    }
+
+    public void deleteWorkout(Long workoutId, Authentication authentication) {
+        User user = userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        Workout workout = workoutRepository
+                .findByIdAndUser(workoutId, user)
+                .orElseThrow(WorkoutNotFoundException::new);
+
+        workoutRepository.delete(workout);
+    }
 
     public WorkoutResponse addDay(Long workoutId, AddWorkoutDayRequest request, Authentication authentication) {
         User user = userRepository.findByEmail(authentication.getName())
@@ -190,10 +211,50 @@ public class WorkoutService {
     }
 
     private WorkoutResponse toResponse(Workout workout) {
+        List<WorkoutDayResponse> dayResponses =
+                workout.getDays()
+                        .stream()
+                        .map(this::toDayResponse)
+                        .toList();
         return new WorkoutResponse(
                 workout.getId(),
                 workout.getName(),
-                new ArrayList<>()
+                dayResponses
+        );
+    }
+
+    private WorkoutDayResponse toDayResponse(WorkoutDay workoutDay) {
+        List<WorkoutExerciseResponse> exerciseResponses =
+                workoutDay.getExercises()
+                        .stream()
+                        .sorted((a, b) ->
+                                Integer.compare(
+                                        a.getExerciseOrder(),
+                                        b.getExerciseOrder()
+                                ))
+                        .map(this::toExerciseResponse)
+                        .toList();
+
+        return new WorkoutDayResponse(
+                workoutDay.getId(),
+                workoutDay.getDay(),
+                exerciseResponses
+        );
+    }
+
+    private WorkoutExerciseResponse toExerciseResponse(WorkoutExercise workoutExercise) {
+
+        Exercise exercise = workoutExercise.getExercise();
+        return new WorkoutExerciseResponse(
+                workoutExercise.getId(),
+                exercise != null ? exercise.getId() : null,
+                exercise != null ? exercise.getName() : null,
+                exercise != null ? exercise.getEmoji() : null,
+                workoutExercise.getCustomName(),
+                workoutExercise.getSets(),
+                workoutExercise.getReps(),
+                workoutExercise.getWeight(),
+                workoutExercise.getExerciseOrder()
         );
     }
 

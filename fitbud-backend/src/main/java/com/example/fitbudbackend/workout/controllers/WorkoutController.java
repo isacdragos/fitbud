@@ -18,28 +18,22 @@ public class WorkoutController {
 
     @PostMapping("/workouts")
     public WorkoutResponse createWorkout(
-            @Valid @RequestBody CreateWorkoutRequest request,
-            Authentication authentication) {
+            @Valid @RequestBody CreateWorkoutRequest request, Authentication authentication) {
         return workoutService.createWorkout(request, authentication);
     }
 
     @GetMapping("/workouts")
-    public List<WorkoutResponse> getWorkouts(
-            Authentication authentication) {
+    public List<WorkoutResponse> getWorkouts(Authentication authentication) {
         return workoutService.getWorkouts(authentication);
     }
 
     @GetMapping("/workouts/{workoutId}")
-    public WorkoutResponse getWorkout(
-            @PathVariable Long workoutId,
-            Authentication authentication) {
+    public WorkoutResponse getWorkout(@PathVariable Long workoutId, Authentication authentication) {
         return workoutService.getWorkout(workoutId, authentication);
     }
 
     @DeleteMapping("/workouts/{workoutId}")
-    public void deleteWorkout(
-            @PathVariable Long workoutId,
-            Authentication authentication) {
+    public void deleteWorkout(@PathVariable Long workoutId, Authentication authentication) {
         workoutService.deleteWorkout(workoutId, authentication);
     }
 

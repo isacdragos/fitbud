@@ -31,7 +31,7 @@ export default function RegisterForm() {
         }
         try {
             const response = await register({ name, email, password });
-            navigate("/test");
+            navigate("/workout");
             console.log(response.token);
             setError("");
             console.log(response.token);

@@ -26,7 +26,7 @@ export default function LoginForm() {
             const response = await login({email, password});
             localStorage.setItem("token", response.token);
 
-            navigate("/test");
+            navigate("/workout");
             console.log(response.token);
             setError("");
             

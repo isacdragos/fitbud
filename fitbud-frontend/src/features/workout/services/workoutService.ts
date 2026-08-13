@@ -1,6 +1,6 @@
 import api from "../../../shared/services/api";
 
-import type { Workout } from "../types/workout";
+import type { Workout } from "../types/Workout";
 
 export async function getWorkouts(): Promise<Workout[]> {
     const response = await api.get<Workout[]>("/workouts");
